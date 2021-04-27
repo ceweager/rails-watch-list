@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>My lists</h1>
+  <% @lists.each do |list| %>
+    <div class="card justify-content-center align-items-center">
+      <%= link_to "<h3>#{list.name}</h3>".html_safe, list_path(list) %>
+    </div>
+  <% end %>
+</div>
