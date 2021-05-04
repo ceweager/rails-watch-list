@@ -1,11 +1,12 @@
 class ListsController < ApplicationController
-  before_action :find_list, only: [:show]
+  before_action :find_list, only: [:show, :destroy]
   def index
     @lists = List.all
+    @list = List.new
   end
 
   def show
-    @movies = find_movies
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -21,6 +22,11 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list.destroy
+    redirect_to lists_path
+  end
+
   private
 
   def find_list
@@ -28,10 +34,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, :movies)
-  end
-
-  def find_movies
-    @list.bookmarks.map{ |bookmark| Movie.find(bookmark.movie_id)}
+    params.require(:list).permit(:name, :pic_url)
   end
 end

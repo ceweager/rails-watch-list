@@ -1,8 +1,24 @@
 <div class="container">
-  <h1>My lists</h1>
+  <h1>My library</h1>
+  <div class="row">
+  <div class="card justify-content-center align-items-center">
+    <h3>Add new list</h3>
+    <%= simple_form_for(@list) do |f| %>
+        <%= f.input :name, class: "row" %>
+        <%= f.input :pic_url, class: "row"  %>
+        <%= f.submit %>
+    <% end  %>
+  </div>
   <% @lists.each do |list| %>
-    <div class="card justify-content-center align-items-center">
-      <%= link_to "<h3>#{list.name}</h3>".html_safe, list_path(list) %>
+    <div class="card justify-content-center align-items-center" style='background-image:url("<%=list.pic_url %>");'>	
+		  <%= link_to '<i class="fas fa-trash-alt small-circle-button"></i>'.html_safe, list_path(list),
+						method: :delete,
+						data: {confirm: "Are you sure?" }
+			%>
+      <div class="card-dark-header">
+				<%= link_to "<h3>#{list.name.capitalize}</h3>".html_safe, list_path(list) %>
+      </div>
     </div>
   <% end %>
+  </div>
 </div>
