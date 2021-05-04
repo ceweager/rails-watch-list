@@ -66,6 +66,10 @@ GEM
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
     faker (2.16.0)
@@ -93,6 +97,8 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
+    nokogiri (1.11.3-x86-linux)
+      racc (~> 1.4)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
@@ -202,12 +208,14 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  x86-linux
   x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
+  dotenv-rails
   faker
   font-awesome-sass (~> 5.12.0)
   jbuilder (~> 2.7)
