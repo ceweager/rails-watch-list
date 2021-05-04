@@ -5,12 +5,12 @@
     <h3>Add new list</h3>
     <%= simple_form_for(@list) do |f| %>
         <%= f.input :name, class: "row" %>
-        <%= f.input :pic_url, class: "row"  %>
+        <%= f.input :photo, as: :file, class: "row"  %>
         <%= f.submit %>
     <% end  %>
   </div>
   <% @lists.each do |list| %>
-    <div class="card justify-content-center align-items-center" style='background-image:url("<%=list.pic_url %>");'>	
+    <div class="card justify-content-center align-items-center" style='background-image:url("<%= cl_image_path list.photo.key %>");'>	
 		  <%= link_to '<i class="fas fa-trash-alt small-circle-button"></i>'.html_safe, list_path(list),
 						method: :delete,
 						data: {confirm: "Are you sure?" }
