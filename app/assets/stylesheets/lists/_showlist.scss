@@ -1,0 +1,28 @@
+textarea {
+  resize: none;
+}
+.form-container{
+	margin: 20px 20px 20px 4px;
+}
+.form-group{
+	margin-right: 20px;
+	#bookmark_comment{ 
+		height: 38px;
+		width: 480px;
+		border-radius: 5px;
+	}
+
+}
+
+label{
+  margin-right: 10px;
+}	
+
+.btn-black{
+	background-color: $dark-brown;
+	color: $light-gray;
+	border-radius: 5px;
+	&:hover{
+		color: $orange;
+	}
+}
