@@ -4,8 +4,8 @@
   <div class="card justify-content-center align-items-center">
     <h3>Add new list</h3>
     <%= simple_form_for(@list) do |f| %>
-        <%= f.input :name, class: "row" %>
-        <%= f.input :photo, as: :file, class: "row"  %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit %>
     <% end  %>
   </div>
