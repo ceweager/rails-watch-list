@@ -4,7 +4,7 @@
 <div class="container">
   <div class="form-container">
     <%= simple_form_for [@list, @bookmark], html: { class: 'form-inline' }  do |f|%>
-      <%= f.input :comment, type: "text" %>
+      <%= f.input :comment %>
       <%= f.association :movie %>
       <%= f.submit %>
     <% end %>
