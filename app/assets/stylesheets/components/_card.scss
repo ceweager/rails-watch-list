@@ -3,14 +3,14 @@
   box-sizing: border-box;
   width: 20rem; 
   height: 18rem;
-  margin: 15px 25px 15px 4px;
+  margin: 15px 45px 35px 4px;
   background-size: cover;
   box-shadow: 16px 16px 0px $dark-brown;
   border: 8px solid $dark-brown;
   
 
   p{
-    height: 50px;
+    height: 45px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -28,7 +28,7 @@
 .big-card{
   height: 26rem;
   width: 30rem;
-  margin: 25px;
+  margin: 40px 25px 30px 10px;
   box-shadow: 15px 15px 0px $dark-brown;
   a{
     color: $orange;
@@ -44,10 +44,9 @@
   align-items:flex-end;
   justify-content:start;
   width: 18rem;
-  padding: 5px 10px;
+  padding: 0px 10px 5px;
   background-color: $dark-brown;
   border-radius: 4px;
-  
   
   a {
     color:$light-gray;
@@ -62,4 +61,41 @@
   height: 50%;
   object-fit: cover; 
   object-position: top;
+}
+
+.review-box{
+  position:relative;
+  margin: 40px 10px 30px 10px;
+  width:22rem;
+  height: 180px;
+  overflow:hidden;
+
+  .rectangle-card{
+    height:120px;
+    box-shadow: 10px 10px 0px $dark-brown;
+  }
+  .speechmark{
+    position:absolute;
+    right: 45px;
+    bottom: 25px;
+    border-top: 15px solid $white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    width: 0%;
+  }
+
+  .black-speechmark{
+    right: 35px;
+    bottom: 5px;
+    border-top: 15px solid $dark-brown;
+  }
+
+  .card-head{
+    padding: 5px 10px;
+  }
+  .card-body{
+    padding: 5px 10px;
+    font-size: 12px;
+  }
 }

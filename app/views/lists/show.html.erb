@@ -29,11 +29,36 @@
           </div>
     <% end %>
   </div>
-  
+  <hr>
   <div class="row">
-    <div class="form-box">
+    <div class="form-box" >
+      <div class="review-head">
+        <i class="fas fa-comment-dots big-icon"></i> <h2 style="padding:10px;">Review this list</h2>
+      </div>
+      <%= simple_form_for [@list, @review], html: { class: 'form-inline' }  do |f|%>
+        <%= f.input :name %>
+        <%= f.input :rating, collection: 1..5, selected: 5  %>
+        <%= f.input :comment %>
+        <%= f.submit class: "btn btn-black" %> 
+      <% end %>
     </div>
     <div class="reviews">
+      <% @reviews.each do |review| %>
+        <div class="review-box">
+          <div class="card rectangle-card">
+            <div class="card-head">
+              <%= review.name %> - <%= "⭐" * review.rating %>
+            </div>
+            <div class="card-body">
+              <%= review.comment %>
+            </div>
+          </div>
+          <div class="speechmark">
+          </div>
+          <div class="speechmark black-speechmark">
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

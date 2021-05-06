@@ -1,10 +1,12 @@
 class ReviewsController < ApplicationController
+  before_action :find_list
+
   def new
-    @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
+    @review.list = @list
     if @review.save
       redirect_to list_path(@list)
     else

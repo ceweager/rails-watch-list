@@ -1,24 +1,24 @@
 <div class="container">
   <h1>all movies</h1>
-  <div class="row">
-  <div class="card justify-content-center align-items-center">
-    <h3>Add new list</h3>
-    <%= simple_form_for(@list) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit class: "btn btn-black big-btn" %>
-    <% end  %>
-  </div>
-  <% @lists.each do |list| %>
-    <div class="card justify-content-center align-items-center" style='background-image:url("<%= cl_image_path list.photo.key %>");'>	
-		  <%= link_to '<i class="fas fa-trash-alt small-circle-button"></i>'.html_safe, list_path(list),
-						method: :delete,
-						data: {confirm: "Are you sure?" }
-			%>
-      <div class="card-dark-header">
-				<%= link_to "<h3>#{list.name.capitalize}</h3>".html_safe, list_path(list) %>
-      </div>
+  <div class="row" style="margin-bottom: 80px;">
+    <div class="card justify-content-center align-items-center" style="padding:10px; margin-bottom: 20px;">
+      <h3>Add new list</h3>
+      <%= simple_form_for(@list) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: "btn btn-black big-btn" %>
+      <% end  %>
     </div>
-  <% end %>
+    <% @lists.each do |list| %>
+      <div class="card justify-content-center align-items-center" style='background-image:url("<%= cl_image_path list.photo.key %>");  margin-bottom: 20px;'>	
+        <%= link_to '<i class="fas fa-trash-alt small-circle-button"></i>'.html_safe, list_path(list),
+              method: :delete,
+              data: {confirm: "Are you sure?" }
+        %>
+        <div class="card-dark-header">
+          <%= link_to "<h3>#{list.name.capitalize}</h3>".html_safe, list_path(list) %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

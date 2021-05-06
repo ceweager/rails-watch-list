@@ -12,18 +12,53 @@ textarea {
 .form-container{
   margin: 20px auto
 }
+
 .form-group{
 	margin-right: 20px;
 	color: white;
+
 	#bookmark_comment{ 
 		height: 38px;
 		width: 480px;
 		border-radius: 5px;
 	}
+	#review_comment{
+	  height: 38px;
+	  width: 350px;
+	  border-radius: 5px;
+	}
+}
 
+hr{
+  margin: 35px 0px;
 }
 
 label{
+  color: $white;
   margin-right: 10px;
-}	
+}
 
+.form-box{
+  .review-head{
+	display: flex;
+	margin: 20px 0;	
+  }
+
+  label{
+	color: $white;
+	background-color: $dark-brown;
+	padding: 7px 14px;
+	border-radius: 5px 0px 0px 5px;
+	margin: 0;
+	margin-left: 5px;
+  }	
+}
+
+
+.reviews{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
