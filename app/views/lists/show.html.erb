@@ -1,14 +1,16 @@
 <div class="big-banner" style= 'background-image: url("<%= cl_image_path @list.photo.key %>");'>
   <h2><%= @list.name %></h2>
 </div>
-<div class="container">
+<div class="form-bar">
   <div class="form-container">
     <%= simple_form_for [@list, @bookmark], html: { class: 'form-inline' }  do |f|%>
-      <%= f.association :movie %>
+      <%= f.association :movie, selected: 1 %>
       <%= f.input :comment %>
       <%= f.submit class: "btn btn-black" %>
     <% end %>
   </div>
+</div>
+<div class="container">
   <div class="row">
     <% @list.bookmarks.each do |bookmark| %>
           <div class="card big-card">
@@ -26,5 +28,12 @@
             %>
           </div>
     <% end %>
+  </div>
+  
+  <div class="row">
+    <div class="form-box">
+    </div>
+    <div class="reviews">
+    </div>
   </div>
 </div>

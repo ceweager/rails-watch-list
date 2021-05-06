@@ -1,9 +1,24 @@
 .small-circle-button{
   position:absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 50%;
-  padding: 5px 7px;
-  background-color: $orange;
+  top: 0px;
+  right: 0px;
+  padding: 4px 14px 10px;
+  background-color: $dark-brown;
   color: $light-gray;
+  &:hover{
+    color: $orange;
+  }
+}
+
+.btn-black{
+	background-color: $dark-brown;
+	color: $light-gray;
+	border-radius: 5px;
+	&:hover{
+		color: $orange;
+	}
+}
+
+.big-btn{
+  padding: 4px 18px;
 }

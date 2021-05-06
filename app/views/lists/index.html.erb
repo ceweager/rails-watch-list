@@ -1,12 +1,12 @@
 <div class="container">
-  <h1>My library</h1>
+  <h1>all movies</h1>
   <div class="row">
   <div class="card justify-content-center align-items-center">
     <h3>Add new list</h3>
     <%= simple_form_for(@list) do |f| %>
         <%= f.input :name %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit %>
+        <%= f.submit class: "btn btn-black big-btn" %>
     <% end  %>
   </div>
   <% @lists.each do |list| %>

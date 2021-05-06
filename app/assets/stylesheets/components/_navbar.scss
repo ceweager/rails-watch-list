@@ -12,3 +12,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-brand{
+  color: $orange;
+  font-weight: bold;
+}
+
+.navbar-right{
+  a{
+    color: $dark-brown;
+    font-weight: bold;
+  }
+}
