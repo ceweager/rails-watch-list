@@ -7,6 +7,10 @@ textarea {
   justify-content: center;
   width: 100%;
   background-color: $dark-brown;
+  label{
+	color: $white;
+	margin-right: 10px;
+  }
 }
 
 .form-container{
@@ -33,10 +37,7 @@ hr{
   margin: 35px 0px;
 }
 
-label{
-  color: $white;
-  margin-right: 10px;
-}
+
 
 .form-box{
   .review-head{
